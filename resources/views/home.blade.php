@@ -15,6 +15,8 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <hr>
+                    <a href="{{ route('posts.index') }}">{{ __('PostIndex') }}</a>
                 </div>
             </div>
         </div>
