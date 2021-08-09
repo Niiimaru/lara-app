@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app_original')
 @section('content')
 
   <div class="container">
@@ -8,11 +8,11 @@
             <h2>以下の記事にコメントします</h2>
               <div class="card mt-3">
                   <div class="card-header">
-                      <h5>タイトル：ここに記事タイトルが表示されます</h5>
+                      <h5>タイトル：{{ $post->title }}</h5>
                   </div>
                   <div class="card-body">
-                  <p class="card-text">内容：記事の内容が表示されます。記事の内容が表示されます。記事の内...</p>
-                  <p>投稿日時：2021-03-12</p>
+                  <p class="card-text">内容：{{ $post->body }}</p>
+                  <p>投稿日時：{{ $post->created_at }}</p>
                   
                   </div>
               </div>
@@ -20,8 +20,18 @@
       </div>
       <div class="row justify-content-center mt-5">
         <div class="col-md-8">
-            <form action="#">
-                <input type="hidden" name="post_id" value="">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            <form action="{{ route('comments.store') }}" method="post">
+                @csrf
+                <input type="hidden" name="post_id" value="{{ $post->id }}">
                 <div class="form-group">
                     <label>コメント</label>
                     <textarea class="form-control" 

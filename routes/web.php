@@ -17,7 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/comments/create','CommentController@create')->name('comments.create');
+Route::get('/comments/create/{post_id}','CommentController@create')->name('comments.create');
+Route::post('/comments', 'CommentController@store')->name('comments.store');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
