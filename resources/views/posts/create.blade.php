@@ -15,8 +15,8 @@
             <form action="{{ route('posts.store') }}" method="POST">
                 @csrf
                 <div class="form-group">
-                    <label>タイトル</label>
-                    <input type="text" class="form-control" placeholder="タイトルを入力して下さい" name="title">
+                    <label>メニュー</label>
+                    <input type="text" class="form-control" placeholder="メニューを入力して下さい" name="title">
                 </div>
                 <div class="form-group">
                     <label>内容</label>

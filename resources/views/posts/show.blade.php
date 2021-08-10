@@ -5,7 +5,7 @@
         <div class="col-md-8">
             <div class="card mt-3">
                 <div class="card-header">
-                    <h5>タイトル：{{ $post->title }}</h5>
+                    <h5>メニュー：{{ $post->title }}</h5>
                 </div>
                 <div class="card-body">
                 <p class="card-text">内容：{{ $post->body }}</p>

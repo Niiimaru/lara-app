@@ -10,7 +10,7 @@
 
               @foreach ($posts as $post)
                 <div class="card-body">
-                    <h5 class="card-title">タイトル : {{ $post->title }}</h5>
+                    <h5 class="card-title">メニュー : {{ $post->title }}</h5>
                     <p class="card-text">
                         内容 : {{ $post->body }}
                     </p>
