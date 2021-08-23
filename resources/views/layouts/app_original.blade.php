@@ -12,24 +12,28 @@
 <body>
   <header>
     <div class="header-left">
-            <img class="logo" src="{{ asset('img/logo.png') }}" alt="">
-        </div>
-        <div class="header-right">
-        <div class="dropdown nav">
+      <a href="http://localhost/lara-app/public/posts">ホーム</a>
+    </div>
+    <div class="header-right">
+      <div class="dropdown nav">
           <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-          {{ Auth::user()->name }}
+            {{ Auth::user()->name }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">{{ __('Logout') }}</a></li>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              <li>
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+              </li>
+              <li class="is-currentt"><a href="{{url('/')}}">ホーム</a></li>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
-            </form>
+              </form>
           </ul>
-        </div>
-        </div>
+      </div>
+    </div>
   </header>
+
   @yield('content')
+
   <footer>
     Copyright &copy; Seedkun Inc.
   </footer>

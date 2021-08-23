@@ -25,7 +25,7 @@ class PostRequest extends FormRequest
     {
         return [
             //
-            'title' => 'required|max:20',
+            'title' => 'required|max:30',
             'body' => 'required',
         ];
     }
@@ -33,8 +33,8 @@ class PostRequest extends FormRequest
     public function messages()
     {
         return[
-            'title.required' => 'タイトルは必須です。',
-            'title.max' => 'タイトルは20文字以内で記入してください。',
+            'title.required' => 'メニューは必須です。',
+            'title.max' => 'メニューは30文字以内で記入してください。',
             'body.required' => '内容は必須です。',
         ];
     }

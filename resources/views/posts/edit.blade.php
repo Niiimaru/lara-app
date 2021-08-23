@@ -23,7 +23,7 @@
                         <label>内容</label>
                         <textarea class="form-control" rows="5" name="body">{{ $post->body }}</textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" onclick="location.href='./index.blade.php'" >更新する</button>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 10px" >更新する</button>
             </form>
         </div>
     </div>
