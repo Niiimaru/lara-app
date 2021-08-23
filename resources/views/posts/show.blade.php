@@ -8,13 +8,14 @@
                     <h5>メニュー：{{ $post->title }}</h5>
                 </div>
                 <div class="card-body">
-                <p class="card-text">内容：{{ $post->body }}</p>
+                <p class="card-text" style="font-size: 20px" >内容：{{ $post->body }}</p>
                 <p>投稿日時：{{ $post->created_at }}</p>
-                <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary">編集する</a>
+                <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary" style="margin-bottom: 15px" >編集する</a>
                 <form action='{{ route('posts.destroy', $post->id) }}' method='post'>
                     @csrf
                     @method('delete')
                     <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("本当に削除しますか？");'>
+                    <a href="http://localhost/lara-app/public/posts" class="btn btn-primary" >戻る</a>
                 </form>
                 </div>
             </div>
@@ -22,9 +23,12 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-md-8">
-              <button type="button" class="btn btn-primary" onclick="location.href='{{ route('comments.create', $post->id) }}'" >コメントする</button>
+              <button type="button" class="btn btn-primary" onclick="location.href='{{ route('comments.create', $post->id) }}'" style="margin-top: 15px" >コメントする</button>
       </div>
     </div>
+
+   
+
     <div class="row justify-content-center">
       <div class="col-md-8 mt-5">
         コメント一覧
