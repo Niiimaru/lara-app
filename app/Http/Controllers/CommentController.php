@@ -29,4 +29,13 @@ class CommentController extends Controller
         return view('posts.show', compact('post'));
 
     }
+
+    public function destroy(CommentRequest $request)
+    {
+        //
+        $comment = Post::find($request->id)-> delete();
+        
+
+        return redirect()->route('posts.index');
+    }
 }
