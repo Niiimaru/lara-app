@@ -20,6 +20,8 @@ Route::get('/', function () {
 Route::get('/comments/create/{post_id}','CommentController@create')->name('comments.create');
 Route::post('/comments', 'CommentController@store')->name('comments.store');
 
+Route::delete('/comments', 'CommentController@destroy')->name('comments.destroy');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
