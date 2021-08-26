@@ -15,7 +15,7 @@
                     @csrf
                     @method('delete')
                     <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("本当に削除しますか？");'>
-                    <a href="http://localhost/lara-app/public/posts" class="btn btn-primary" >戻る</a>
+                    <a href="http://127.0.0.1:8000/posts" class="btn btn-primary" >戻る</a>
                 </form>
                 </div>
             </div>

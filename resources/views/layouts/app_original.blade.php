@@ -12,7 +12,7 @@
 <body>
   <header>
     <div class="header-left">
-      <a href="http://localhost/lara-app/public/posts">ホーム</a>
+      <a href="http://127.0.0.1:8000/posts">ホーム</a>
     </div>
     <div class="header-right">
       <div class="dropdown nav">
