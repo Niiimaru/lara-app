@@ -17,10 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/comments/create/{post_id}','CommentController@create')->name('comments.create');
 Route::post('/comments', 'CommentController@store')->name('comments.store');
-
-Route::delete('/comments', 'CommentController@destroy')->name('comments.destroy');
+Route::delete('/comments/{post}', 'CommentController@destroy')->name('comments.destroy');
 
 Auth::routes();
 

@@ -30,10 +30,10 @@ class CommentController extends Controller
 
     }
 
-    public function destroy(CommentRequest $request)
+    public function destroy($id)
     {
         //
-        $comment = Post::find($request->id)-> delete();
+        $comment = Comment::find($id) -> delete();
         
 
         return redirect()->route('posts.index');
