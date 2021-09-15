@@ -42,12 +42,12 @@ footer{
 }
 
 .btn-primary{
-  background-color:rgb(62,45,34);
-  border-color:rgb(62,45,34);
+  background-color: rgb(48, 48, 248);
+  border-color: blue;
 }
 
 .btn-danger{
-  background-color: rgb(106,64,33);
-  border-color: rgb(106,64,33);
+  background-color: rgb(245, 76, 104);
+  border-color: red;
 }
 
