@@ -70,7 +70,7 @@
             @if (Route::has('login'))
             <div class="top-right links">
                 @auth
-                    <a href="{{ url('/timeline') }}" class="left-btn">timeline</a>
+                    <a href="{{ url('/posts') }}" class="left-btn">timeline</a>
                     <a class="dropdown-item right-btn" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
